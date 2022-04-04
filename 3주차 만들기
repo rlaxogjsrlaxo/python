@@ -47,7 +47,7 @@ print("hello", end=" ")
 print("python")
 
 #end를 이용하여 끝에 문자 추가 가능
-print("hello", end-":")
+print("hello", end=":")
 print("python")
 
 #콤마는 스페이스 키로 구분되어 출력됩니다.
