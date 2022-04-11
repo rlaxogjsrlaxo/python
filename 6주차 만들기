@@ -1,0 +1,31 @@
+#전체 : Hello
+#일부 : x가 가리키는 정보
+
+import time
+
+for x in "Hello":
+    #print(x)
+    #타임모듈의 sleep()기능 실행
+    time.sleep(1)        #.~의
+    print('단지 반복에 사용')
+'''
+#문제    
+#자신의 영문 이름을 입력받아
+#아래와 같이 출력되도록 프로그램
+#해봅시다.
+#입력:honggildong
+#출력:h-o-n-g-g-i-l-d-o-n-g
+
+#풀이1
+name=input("영문이름 입력:") #n-까지만 출력하고 + g
+for x in name[0:-1]:
+    print(x,'-',end="")
+
+print(name[-1])
+
+#풀이2
+name=input("영문이름 입력:")
+for x in name[0:-1]:
+    print(x+'-',end="")
+
+print(name[-1])
