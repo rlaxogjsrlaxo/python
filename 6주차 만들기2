@@ -1,0 +1,126 @@
+'''
+
+a = int(input("숫자 입력:"))
+n=1
+
+while n <= a*a:
+    print(f'{n:2}',end=" ")
+    n= n+1
+    if n%a==1:
+        print(" ")
+
+
+a = int(input("숫자 입력:"))
+n =1
+
+while n <= a*a:
+    print(f'{n:2}')
+    n= n+1
+    if n%a==1:
+        print(" ")
+        while n%a==1:
+            print(end=" ")
+
+            break
+    
+######################################################
+#전체 : Hello
+#일부 : x가 가리키는 정보
+
+import time
+
+for x in "Hello":
+    #print(x)
+    #타임모듈의 sleep()기능 실행
+    time.sleep(1)        #.~의
+    print('단지 반복에 사용')
+
+#문제    
+#자신의 영문 이름을 입력받아
+#아래와 같이 출력되도록 프로그램
+#해봅시다.
+#입력:honggildong
+#출력:h-o-n-g-g-i-l-d-o-n-g
+
+#풀이1
+name=input("영문이름 입력:") #n-까지만 출력하고 + g
+for x in name[0:-1]:
+    print(x,'-',end="")
+
+print(name[-1])
+
+#풀이2
+name=input("영문이름 입력:")
+for x in name[0:-1]:
+    print(x+'-',end="")
+
+print(name[-1])
+###############################################
+
+import time
+
+for a in [1,2,3,4,5]:    #전체: 리스트
+    print(a)
+    time.sleep(1)
+
+#문제 for a in [21,22,13,34,15]:    #전체: 리스트
+#리스트안에 들어있는 자연수 중에서 홀수의 갯수와, 짝수의 갯수를 출력하는 프로그램을 완성해 봅시다.ㅣ
+#짝수란 2로 나누었을 때 나머지가 0이 되는 수를 말합니다.
+
+
+a=[21,22,13,34,15]
+
+if a%2==0:
+    print(f',len(a))
+
+
+
+#범위 표현하기
+for x in range(0,10,2): #2는 2칸씩
+    print(x)
+  
+for x in range(10,0,-1): # 역방향
+    print(x)      
+     
+
+#범위를 리스트로 바꾸기
+a = list(range(0,10))
+
+for x in a:
+    print(x)
+
+print('a의 인덱스 3번 요소 :', a[3])
+
+
+#구구단
+
+import time
+
+for outN in range(4):
+    for inN in range(6):
+        print(f'{outN} x {inN}=',outN*inN)
+        time.sleep(1)      
+
+#문제
+#1. 구구단의 결과가 출력되도록 위 코드를 수정해봅시다.(3X4=12)
+import time
+
+for outN in range(10):
+    for inN in range(10):
+        print(f'{outN} x {inN}=',outN*inN)
+        time.sleep(1)      
+
+#2. 아래와 같이 출력되는 구구단 프로그램 해봅시다.
+# 1X1=1 | 2X1=2 | 3X1=3 |
+# 1X2=2 | 2X2=4 | 3X2=6 |
+# 1X3=3 | 2X3=6 | 3X3=9 |
+# 1X4=4 | 2X4=8 | 3X4=12|
+'''
+import time
+
+for outN in range(1,4):
+    for inN in range(1,5):
+        print(f'{outN} x {inN} =',outN*inN,'  |')
+
+
+        time.sleep(0.1)      
