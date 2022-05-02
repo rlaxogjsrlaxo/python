@@ -1,0 +1,86 @@
+'''
+apple = 49
+man = 3
+
+while apple >= man:
+
+    apple = apple - man # apple is 46
+    
+print(f'남은사과는 {apple}입니다.')
+
+
+사과갯수 = 49
+사람수 = 3
+꺼낸횟수 = 0
+
+while 사과갯수 >= 사과갯수:
+
+    사과갯수 = 사과갯수 - 사람수  # apple is 46
+    
+print(f'남은사과는 {apple}입니다.')
+
+apple = 49
+man = 3
+count = 0
+
+while apple >= man:
+    #사람수 만큼 사과갯수를 뺍니다
+    #꺼낸 횟수는 ____입니다
+
+    apple = apple - man # apple is 46
+    count = count+1
+    
+print(f'남은사과는 {apple}입니다.')
+print(f'꺼낸횟수는 {count}입니다.')
+
+#손가락이 1개씩 늘어난다 finger +=1
+#손가락이 1개씩 늘어난다 finger -=1
+#사과의 갯수가 사람수만큼씩 줄어든다.
+#사과갯수 -= 사람수 ==== 사과갯수 = 사과갯수 - 사람수
+
+'''
+#보드 모델링 하기
+i=0
+BOARD=[ [1,2,5],
+        [3,0,6],
+        [8,7,4]]
+
+#화면에 보드 상태 보여주기
+print(BOARD[0])
+print(BOARD[1])
+print(BOARD[2])
+
+r=1
+c=1
+
+#만약 key값이 문자 'd'와 같다면
+#BOARD[2][2]와 BOARD[2][1]를 서로 바꾸기
+
+while i<=1000000:
+    key = input('w a s d 중에 하나 입력')
+    
+    if key == 'd' and c<=1: #왼손, 오른손 = 오른손, 왼손
+    
+       BOARD[r][c+1],BOARD[r][c] = BOARD[r][c],BOARD[r][c+1]
+       r=r
+       c+=1
+    
+    if key == 'a' and c<=2:
+       BOARD[r][c-1],BOARD[r][c] = BOARD[r][c],BOARD[r][c-1]
+       r=r
+       c-=1
+   
+    if key == 'w' and r<=2:
+       BOARD[r-1][c],BOARD[r][c] = BOARD[r][c],BOARD[r-1][c]
+       r=r-1
+       c=c
+
+    if key == 's' and r<=1:
+       BOARD[r+1][c],BOARD[r][c] = BOARD[r][c],BOARD[r+1][c]
+       r=r+1
+       c=c
+
+    print(BOARD[0])
+    print(BOARD[1])
+    print(BOARD[2])
+    print()
