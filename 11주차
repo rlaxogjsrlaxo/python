@@ -1,0 +1,26 @@
+import random #랜덤 추가
+st=0 #스트라이크 카운트
+c=0  #시도횟수 카운트
+a=[]
+
+while len(a)<3: #a의 갯수가 3미만
+    r=str(random.randint(0,9)) #str=문자열, r안에 0~9까지 숫자입력
+    if not(r in a): #a안에 n이 없을때
+        a.append(r) #a에 r추가
+
+while st<3 : #스트라이크가 3미만일때
+    st=0 #스트라이크 초기화
+    ba=0 #볼 초기화
+    o=0 #아웃 초기화
+    r=str(input("3개의 숫자를 입력하시오(ex:123) : "))
+    for i in range(0,3):
+        for x in range(0,3):
+            #리스트
+            if r[i]==a[x] and i==x:
+                st+=1
+            elif r[i]==a[x] and i!=x:
+                ba+=1
+    o=3-(ba+st)
+    print(f'스트라이크:{st}, 볼:{ba}, 아웃{o}')
+    c+=1
+print("정답입니다 시도횟수:",c)
